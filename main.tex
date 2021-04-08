@@ -136,27 +136,18 @@ https://github.com/Nik123-cpp/Assignment-4/blob/main/main.tex
 \end{lstlisting}
 \section{ Problem UGC|MATH 2019,Q.58}
 A sample of size n =2 is drawn from a population of size N=4 using probability proportional to size without replacement scheme , Where the probabilities proportional to size are
+\newline
 
-\begin{table}[h!]
-\resizebox{\columnwidth}{0.7cm}{%
-  \begin{tabular}{|c |c |c |c |c|}
-    \hline
-    i:&  1 & 2 & 3 & 4\\
-    \hline
-    $p_{i}$ & 0.4 & 0.2 &0.2 & 0.2\\
-    \hline
-  \end{tabular}%
-} 
-\end{table}  
-
+$i: \hspace{1cm} 1 \hspace{1.2cm} 2 \hspace{1.3cm} 3 \hspace{1.4cm} 4$
+\newline
+$p_{i} \hspace{1cm} 0.4 \hspace{1cm} 0.2 \hspace{1cm}0.2 \hspace{1cm} 0.2$
+\newline \newline
 The probability of inclusion of unit (1) in the sample is 
 \newline
-$(1) 0.4 \quad \quad  (2) 0.6$
+$(1) 0.4 \hspace{4cm}(2) 0.6$
 \newline
-$(3) 0.7 \quad  \quad (4) 0.75$
+$(3) 0.7 \hspace{4cm}(4) 0.75$
 \section{Solution }
-Let P be the probability of inclusion of unit (1)
-\newline
 Let number of  samples with size n out of size N are be $f_{N}(n)$ 
 \begin{align}
     f_{N}(n)&=\binom{N}{n}
@@ -168,11 +159,19 @@ In this case
     n&=2
 \end{align}
 
-Let $P_{i}(j)$ represent the probability for selecting unit (j) after selecting  unit (i) 
+Let $P_{i}(j)$ represent the probability for selecting unit (j) as second unit after selecting  unit (i) 
 \begin{align}
     P_{i}(j)&=\frac{p_{j}}{1-p_{i}}
     \label{eq:eq2}
 \end{align}
+Let Probability of selecting sample i,j is $\pr{i,j}$,using \eqref{eq:eq2}  $\pr{i,j}$ is 
+\begin{align}
+    \pr{i,j}&=P_{i}(j)+P_{j}(i)
+    \\
+    &=(p_{i}\times \frac{p_{j}}{1-p_{i}}) + (p_{j}\times \frac{p_{i}}{1-p_{j}}) 
+    \label{eq:eq3}
+\end{align}
+\newpage
 Total samples(Size n=2)are 
 
 \begin{table}[h!]
@@ -188,18 +187,15 @@ Total samples(Size n=2)are
   \caption{ list of samples}
   \label{tab:label1_test}
 \end{table}
-Probability of selecting sample i,j ($\pr{i,j}$),using \eqref{eq:eq2} is 
-\begin{align}
-    \pr{i,j}&=(p_{i}\times \frac{p_{j}}{1-p_{i}}) + (p_{j}\times \frac{p_{i}}{1-p_{j}}) 
-    \label{eq:eq3}
-\end{align}
+Let P be the probability of inclusion of unit (1).
+\newline
 Favourable cases for inclusion of unit(1) are case (1,2,3),So
 \begin{align}
-    P&=\pr{1,2} +\pr{1,3}+\pr{1,4}
+    \text{P}&=\pr{1,2} +\pr{1,3}+\pr{1,4}
 \end{align}
-using \eqref{eq:eq3}
+using \eqref{eq:eq3} and $p_{i}$ from question ,
 \begin{align}
-    P&=\frac{7}{30} + \frac{7}{30} + \frac{7}{30}
+    \text{P}&=\frac{7}{30} + \frac{7}{30} + \frac{7}{30}
     \\
     &=0.7
 \end{align}

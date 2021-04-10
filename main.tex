@@ -150,10 +150,17 @@ A sample of size $n =2$ is drawn from a population of size $N=4$ using probabili
    \caption*{Table : Probability vs Size}
 \end{table}  
 The probability of inclusion of unit (1) in the sample is 
-\newline
-$(1) 0.4  \quad (2) 0.6$
-\newline
-$(3) 0.7  \quad (4) 0.75$
+
+\begin{enumerate}
+\begin{multicols}{4}
+\setlength\itemsep{2em}
+\item $0.4$
+\item $0.6$
+\item $0.7$
+\item $0.75$
+\end{multicols}
+\end{enumerate}
+
 \section{Solution }
 Let $P_{i}(j)$ represent the probability for selecting unit (j) as second unit after selecting  unit (i) 
 \begin{align}
@@ -165,7 +172,7 @@ Let  $\pr{i,j}$ be probability of selecting sample \{i,j\} ,using \eqref{eq:eq2}
 \begin{align}
     \pr{i,j}&=P_{i}(j)+P_{j}(i)
     \\
-    &=(p_{i}\times \frac{p_{j}}{1-p_{i}}) + (p_{j}\times \frac{p_{i}}{1-p_{j}}) 
+    &=\brak{p_{i}\times \frac{p_{j}}{1-p_{i}}} + \brak{p_{j}\times \frac{p_{i}}{1-p_{j}}}
     \label{eq:eq3}
 \end{align}
 Total samples(Size $n=2$)are 
@@ -179,7 +186,7 @@ Total samples(Size $n=2$)are
     \hline
     \textcolor{green}{Case }&  \textcolor{Red}{1} & \textcolor{Red}{2} & \textcolor{Red}{3} & \textcolor{Red}{4} & \textcolor{Red}{5} & \textcolor{Red}{6}\\
     \hline
-    \textcolor{green}{Sample(size $n=2$)} & \textcolor{mycolor}{\{1,2\}} & \textcolor{mycolor}{\{1,3\} }& \textcolor{mycolor}{\{1,4\} }& \textcolor{mycolor}{\{2,3\}} & \textcolor{mycolor}{\{2,4\} }& \textcolor{mycolor}{\{3,4\}}\\
+    \textcolor{green}{Sample(size $n=2$)} & \textcolor{mycolor}{\brak{1,2}} & \textcolor{mycolor}{\brak{1,3} }& \textcolor{mycolor}{\brak{1,4} }& \textcolor{mycolor}{\brak{2,3}} & \textcolor{mycolor}{\brak{2,4}}& \textcolor{mycolor}{\brak{3,4}}\\
     \hline
   \end{tabular}%
 } 
